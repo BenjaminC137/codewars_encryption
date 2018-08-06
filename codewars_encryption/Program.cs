@@ -7,7 +7,7 @@ namespace codewars_encryption
         static void Main(string[] args)
         {
 
-            string answer = Kata.Decrypt("This is a test!", 4);
+            string answer = Kata.Encrypt(null, 4);
 
             Console.WriteLine("Final Result: " + answer);
         }
@@ -17,8 +17,7 @@ namespace codewars_encryption
     {
         public static string Encrypt(string text, int n)
         {
-
-            if (n <= 0)
+            if (n <= 0 || text == null)
             {
                 return text;
             }
@@ -57,7 +56,7 @@ namespace codewars_encryption
 
         public static string Decrypt(string encryptedText, int n)
         {
-            if (n <= 0)
+            if (n <= 0 || encryptedText == null)
             {
                 return encryptedText;
             }
